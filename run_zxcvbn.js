@@ -1,20 +1,16 @@
 
 const fs = require('fs')
-//const lineReader = require('line-reader')
-//const lineByLine = require('n-readlines')
 
 var stats = require('stats-lite')
-
 const readline = require('readline')
 
-var zxcvbn = require('/home/trader/IdeaProjects/reserve/pkgs/zxcvbn-efrt.js')
+var zxcvbn = require(process.argv.slice(2)[1])
 
 var inputFile = process.argv.slice(2)[0]
 
 var zxcvbn_obj = null
 
 var secHour100List = []
-var wordList = []
 
 function printStats(input_list) {
     console.log("Min: " + Math.min(...input_list))
